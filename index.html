@@ -6,59 +6,99 @@
     <title>Rayzal Ahmad Yaacob's Personal Webpage</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #f9f9f9;
             color: #333;
         }
         header {
-            background-color: #333;
-            color: #fff;
-            padding: 1em 0;
+            background-color: #fff;
+            border-bottom: 1px solid #ddd;
+            padding: 2em 0;
             text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+            font-weight: normal;
+        }
+        header p {
+            margin: 0.5em 0 0;
+            font-size: 1.2em;
+            color: #777;
         }
         nav {
-            background-color: #444;
-            overflow: hidden;
+            background-color: #fff;
+            border-bottom: 1px solid #ddd;
+            padding: 0.5em 0;
+            position: fixed;
+            width: 100%;
+            top: 5em;
+            z-index: 1000;
         }
         nav a {
-            float: left;
-            display: block;
-            color: #fff;
-            text-align: center;
-            padding: 14px 16px;
+            color: #333;
             text-decoration: none;
+            margin: 0 1em;
+            font-size: 1em;
+            transition: color 0.3s;
         }
         nav a:hover {
-            background-color: #ddd;
-            color: black;
+            color: #007BFF;
         }
         .container {
             width: 80%;
-            margin: 0 auto;
+            margin: 8em auto 2em;
             overflow: hidden;
-            padding-top: 2em;
         }
         section {
             padding: 2em 0;
-            border-bottom: 1px solid #ccc;
+            border-bottom: 1px solid #eee;
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+        }
+        .profile-pic {
+            max-width: 150px;
+            border-radius: 50%;
+            transition: transform 0.3s;
+        }
+        .profile-info {
+            display: flex;
+            align-items: center;
+        }
+        .profile-info img {
+            margin-right: 2em;
         }
         footer {
-            background-color: #333;
-            color: #fff;
+            background-color: #fff;
+            color: #777;
             text-align: center;
             padding: 1em 0;
             position: fixed;
             width: 100%;
             bottom: 0;
+            border-top: 1px solid #ddd;
         }
         .title {
-            font-size: 2em;
+            font-size: 1.5em;
             margin-bottom: 0.5em;
         }
         .content {
             font-size: 1em;
+            line-height: 1.6;
+        }
+        .profile-pic:hover {
+            transform: scale(1.1);
+        }
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
         }
     </style>
 </head>
@@ -79,9 +119,12 @@
 <div class="container">
     <section id="about">
         <h2 class="title">About Me</h2>
-        <p class="content">
-            Hi, I'm Rayzal Ahmad Yaacob, but you can call me Ray. I'm a passionate individual with interests in various fields. (Placeholder for a more detailed bio)
-        </p>
+        <div class="profile-info">
+            <img src="C5A55441-9302-4AD9-AB3A-71B839F6CC9D_1_105_c.jpeg" alt="Profile Picture" class="profile-pic">
+            <p class="content">
+                Hi, I'm Rayzal Ahmad Yaacob, but you can call me Ray. I'm a software engineer with a passion for developing innovative solutions that make a difference. With a strong background in software development and a keen interest in emerging technologies, I enjoy tackling challenging problems and continuously improving my skills. (Placeholder for a more detailed bio)
+            </p>
+        </div>
     </section>
 
     <section id="projects">
